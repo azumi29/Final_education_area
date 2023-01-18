@@ -37,6 +37,7 @@ df_final_education_area = df_final_education_area.drop('E9106_最終学歴人口
 # groupby
 df_final_education_area = df_final_education_area.groupby(['都道府県No.', '都道府県'], as_index=False) # ['都道府県No.']と['都道府県']をインデックスにしない。（X軸として使えなくなるため）
 df_final_education_area = df_final_education_area.mean()
+df_final_education_area = df_final_education_area.round(1)
 print(df_final_education_area)
 
 
@@ -69,3 +70,11 @@ ax.legend(df_final_education_area.columns[2:6].tolist(), loc='lower right', bord
 plt.savefig("final_education_area.png")
 
 plt.show()
+
+
+
+# グラフの中に数値を表示
+# for i in range(len(height1)):
+#     ax.text(i, height1[i]/2, height1[i], fontsize=5)
+#     ax.text(i, height1[i]+height2[i]/2, height2[i])
+#     ax.text(i, height1[i]+height2[i]+height3[i]/2, height3[i])
