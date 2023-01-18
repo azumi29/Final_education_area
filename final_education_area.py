@@ -52,7 +52,7 @@ label_x = df_final_education_area['都道府県No.']
 sum = height1 + height2 + height3 + height4
 
 ax.set_xticks(x) # x軸に都道府県No.をセット
-ax.set_xticklabels(df_final_education_area['都道府県'] ,fontname="MS Gothic", rotation=45) # 都道府県No.を都道府県に置換
+ax.set_xticklabels(df_final_education_area['都道府県'] ,fontname="MS Gothic", fontsize=5, rotation=45) # 都道府県No.を都道府県に置換
 
 # 100%の積み上げのための計算
 ax.bar(x, (height1 / sum) * 100)
